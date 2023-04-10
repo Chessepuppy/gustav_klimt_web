@@ -1,0 +1,269 @@
+/** 重置样式  reset style **/
+* {
+    margin: 0;
+    padding: 0;
+    -moz-box-sizing: border-box;  
+    -webkit-box-sizing: border-box; 
+    -o-box-sizing: border-box; 
+    -ms-box-sizing: border-box; 
+    box-sizing: border-box; 
+    /**不用去考虑了它的border和padding**/
+}
+
+html,body {
+    height: 100%;   /***** 网页自适应浏览器窗口*****/
+}
+html {
+    font-size: 18px;   /*基准*/
+    font-family: MuLan;
+    color: white;
+}
+a {
+    color: white;
+    text-decoration: none;
+}
+ul {
+    list-style: none;
+}
+
+/* header styles   start  */
+header{
+    /* background: #f0531f; */
+    width: 100%;
+    background: url(../image/klimt6.jpeg) no-repeat center center/cover;
+    padding-bottom:16.5rem;
+}
+/****头部样式***/
+ul.header_list li{
+    height: 3.5rem;
+    margin: 1.2rem .5rem;
+    line-height: 3.5rem;
+    font-size: 1.1rem;  
+}
+ul.header_list li>img{
+    height: 100%;
+}
+
+header h2{
+    margin-top: 9.5rem;
+    text-align: center;
+    font-size:6rem;
+}
+header p{
+    font-family: XiYuan;
+    margin:1rem 0;
+    text-align: center;
+    font-size: .9rem;
+}
+header>div .enter{
+    width: 100%;
+    text-align: center;
+    margin-top: 3rem;
+}
+header>div .enter i{
+    position: relative;
+    z-index: 0;
+    display: inline-block;
+    width: 3.25rem;
+    height: 3.25rem;
+    background: #d68c1d;
+    line-height: 3.25rem;
+    text-align: center;
+    font-size: 1.3rem;
+    border-radius: 1.7rem;
+}
+header>div .enter i:hover{
+    color: #b7730e;
+    font-size: 1.8rem;
+}
+header>div .enter i::after{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    display: inline-block;
+    width: 3.25rem;
+    height: 3.25rem;
+    background: radial-gradient(#d68c1d 20%,transparent);
+    border-radius: 1.7rem;
+    animation: run 1.5s linear infinite;
+}
+@keyframes run{
+    0%{
+        transform: scale(1)
+    }
+    100%{
+        transform: scale(1.8);
+    }
+    
+}
+/* 头部样式结束  end */
+
+/* section style  start */
+section{
+    padding-bottom: 1.8rem;
+    background:rgb(53, 53, 53);
+
+}
+
+/* 导航栏nav style */
+section div.sec_nav{
+    position: sticky;
+    top: 1.75rem;
+    z-index: 5;
+}
+section div.sec_nav ul{
+    background:#d68c1d;
+    box-shadow: 0 -0.25rem 1rem #d68c1d; 
+    transform: translateY(-1.75rem);
+    -ms-transform: translateY(-1.75rem);    /*IE9*/
+    -moz-transform: translateY(-1.75rem);   /* Firefox */
+    -webkit-transform: translateY(-1.75rem);  /* Safari 和 Chrome */
+    -o-transform: translateY(-1.75rem);  /* Opera */
+
+}
+
+section>div>ul::after{
+    content: '';
+    clear: both;
+    display: block;
+    width: 0;
+    height: 0;
+    overflow: hidden;
+}
+section div.sec_nav ul li{
+    float: left;  
+}
+section div.sec_nav ul li a{
+    display: inline-block;
+    height: 3rem;
+    padding: 0 2rem;
+    line-height: 3rem;
+    font-weight: 600;
+    letter-spacing: .2rem;
+    font-size: 1.3rem; 
+    /* color: rgb(53, 53, 53); */
+    color: #ffffff; 
+   
+}
+section div.sec_nav ul li a:hover{
+    background: #bf780e;
+    color: white;
+}
+
+/* 导航栏nav style  end*/
+
+/* 图片展示样式 start*/
+div.sec_picture div{
+    width: 20%;
+    height: 30rem;
+    overflow: hidden;
+}
+div.sec_picture div img{
+    width: 100%;
+    filter:brightness(0.4);
+    -webkit-filter:brightness(0.4);
+    -moz-filter:brightness(0.4);
+    -o-filter:brightness(0.4);
+    -ms-filter:brightness(0.4);
+}
+
+div.sec_picture div:nth-child(3) img{
+    border: .2rem solid #bf780e;
+    filter:brightness(1);
+    -webkit-filter:brightness(1);
+    -moz-filter:brightness(1);
+    -o-filter:brightness(1);
+    -ms-filter:brightness(1);
+}
+
+div.sec_picture div:hover img{
+    border: .2rem solid #bf780e;
+    filter:brightness(1);
+    -webkit-filter:brightness(1);
+    -moz-filter:brightness(1);
+    -o-filter:brightness(1);
+    -ms-filter:brightness(1);
+}
+/* 图片展示样式 end*/
+
+/* footer style start  */
+footer{
+    background: #d68c1d;
+}
+
+.footbody ul li{
+    padding: 1.2rem;  
+}
+.footbody ul li.bigWrite{
+    font-size: 1.2rem;
+    font-weight: 550;
+}
+/* footer style end */
+
+/************* about  关于  start  ***************/
+section .about_us ul{
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+section .about_us li{
+    position: relative;
+    width: 15rem;
+    height: 20.5rem;
+    
+}
+
+section .about_us li img{
+    width:100%;
+    height: 100%;
+}
+
+section .about_us ul{
+    -webkit-flex-wrap: wrap;
+    -moz-flex-wrap: wrap;
+    -ms-flex-wrap: wrap;
+    -o-flex-wrap: wrap;
+    flex-wrap: wrap;
+}
+
+/************* about  关于  end  ***************/
+
+/****作品 works start*****/
+.work_channel_box ul{
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+.work_channel_box ul li{
+    position: relative;
+    width: 16.5rem;
+    height: 27.5rem;
+    
+}
+.work_channel_box ul li:hover img{
+    filter:brightness(0.5) ;
+    -webkit-filter:brightness(0.5);
+}
+.work_channel_box ul li:hover p{
+    display: block;
+}
+
+.work_channel_box ul li:hover h4{
+    border-bottom: .12rem solid #d68c1d;
+}
+.work_channel_box ul li img{
+    width:100%;
+    height: 80%;
+}
+.work_channel_box ul li p{
+    position: absolute;
+    top: 0;
+    left: 0;
+    margin: 1rem;
+    display: none;
+}
+.work_channel_box ul li h4{
+    font-size: .9rem;
+    margin-bottom: .5rem;
+}
+/****作品  works end*****/
